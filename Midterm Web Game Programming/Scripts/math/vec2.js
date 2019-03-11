@@ -20,6 +20,7 @@ var math;
             if (y === void 0) { y = 0; }
             return _super.call(this, x, y) || this;
         }
+        // added width: number = 0, height:number = 0
         // Methods
         Vec2.Distance = function (P1, P2) {
             return Math.floor(Math.sqrt(Math.pow(P2.x - P1.x, 2) + Math.pow(P2.y - P1.y, 2)));

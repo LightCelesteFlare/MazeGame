@@ -3,7 +3,7 @@ module scenes {
         // Variables
         private welcomeLabel: objects.Label;
         private startButton: objects.Button;
-        private background: objects.Background;
+        private background: objects.StartBackground;
 
         // Constructors
         constructor(assetManager: createjs.LoadQueue) {
@@ -18,8 +18,8 @@ module scenes {
 
         // Use start function to create objects
         public Start(): void {
-            this.background = new objects.Background(this.assetManager);
-            this.welcomeLabel = new objects.Label("Welcome!", "60px", "Consolas", "#FFFFFF", 320, 240, true);
+            this.background = new objects.StartBackground(this.assetManager);
+            this.welcomeLabel = new objects.Label("Abyss Locket Maze", "60px", "Consolas", "#FFFFFF", 310, 240, true);
             this.startButton = new objects.Button(this.assetManager, "startButton", 300, 450);
             this.Main();
         }

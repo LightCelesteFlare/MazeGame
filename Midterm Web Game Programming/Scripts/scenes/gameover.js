@@ -18,22 +18,29 @@ var scenes;
         // Constructor
         function GameOverScene(assetManager) {
             var _this = _super.call(this, assetManager) || this;
+            _this.soundwave = createjs.Sound.play("winner");
+            _this.soundwave.volume = 0.5;
             _this.Start();
             return _this;
         }
         // Methods
         // Button Event Handlers
         GameOverScene.prototype.backButtonClick = function () {
-            objects.Game.currentScene = config.Scene.GAME;
+            objects.Game.currentScene = config.Scene.START;
         };
         GameOverScene.prototype.Start = function () {
-            this.gameOverLabel = new objects.Label("Game Over", "40px", "Consolas", "#000000", 320, 240, true);
+            this.background = new objects.Background(this.assetManager);
+            this.background.x = 250;
+            this.background.y = 500;
+            this.gameOverLabel = new objects.Label("Winner", "40px", "Consolas", "#990087", 320, 240, true);
             this.backButton = new objects.Button(this.assetManager, "backButton", 320, 340);
             this.Main();
         };
         GameOverScene.prototype.Update = function () {
+            this.background.Update();
         };
         GameOverScene.prototype.Main = function () {
+            this.addChild(this.background);
             this.addChild(this.gameOverLabel);
             this.addChild(this.backButton);
             this.backButton.on("click", this.backButtonClick);

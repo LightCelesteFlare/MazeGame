@@ -23,14 +23,14 @@ var objects;
         }
         // Methods / Function
         Background.prototype.Start = function () {
-            this.speedY = 1;
-            this.Reset();
+            // this.speedY = 1;
+            // this.Reset();
         };
         Background.prototype.Update = function () {
-            // Move our background
-            this.Move();
-            // Check bounds
-            this.CheckBounds();
+            // // Move our background
+            // this.Move();
+            // // Check bounds
+            // this.CheckBounds();
         };
         Background.prototype.Reset = function () {
             this.y = -1120;

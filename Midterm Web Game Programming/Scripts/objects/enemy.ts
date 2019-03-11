@@ -8,12 +8,12 @@ module objects {
         }
         // Method / Functions
         public Start():void {
-            this.x = Math.floor(Math.random() * 500) + 0;  // Random value between 0 and 500
-            this.y = Math.floor(Math.random() * -200) + -50;
+            this.x = 300;
+            this.y = 700;
         }
         public Update():void {
-            this.Move();
-            this.CheckBounds();
+            // this.Move();
+            // this.CheckBounds();
         }
         public Reset():void {}
         public Move():void {

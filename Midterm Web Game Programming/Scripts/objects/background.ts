@@ -11,15 +11,15 @@ module objects {
         }
         // Methods / Function
         public Start():void {
-            this.speedY = 1;
-            this.Reset();
+            // this.speedY = 1;
+            // this.Reset();
         }
 
         public Update():void {
-            // Move our background
-            this.Move();
-            // Check bounds
-            this.CheckBounds();
+            // // Move our background
+            // this.Move();
+            // // Check bounds
+            // this.CheckBounds();
         }
 
         private Reset():void {

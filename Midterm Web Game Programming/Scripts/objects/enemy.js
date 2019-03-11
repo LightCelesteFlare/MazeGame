@@ -24,12 +24,12 @@ var objects;
         }
         // Method / Functions
         Enemy.prototype.Start = function () {
-            this.x = Math.floor(Math.random() * 500) + 0; // Random value between 0 and 500
-            this.y = Math.floor(Math.random() * -200) + -50;
+            this.x = 300;
+            this.y = 700;
         };
         Enemy.prototype.Update = function () {
-            this.Move();
-            this.CheckBounds();
+            // this.Move();
+            // this.CheckBounds();
         };
         Enemy.prototype.Reset = function () { };
         Enemy.prototype.Move = function () {

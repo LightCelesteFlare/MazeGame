@@ -24,8 +24,9 @@ var objects;
         // Methods / functions
         Player.prototype.Start = function () {
             this.isDead = false;
-            this.x = 300;
-            this.y = 700;
+            this.win = false;
+            // this.x = 300;
+            // this.y = 700;
         };
         Player.prototype.Update = function () {
             this.Move();
@@ -36,10 +37,16 @@ var objects;
             // this.x = objects.Game.stage.mouseX; // objects.Game.stage is a global variable
             // Keyboard controls
             if (objects.Game.keyboardManager.moveLeft) {
-                this.x -= 5;
+                this.x -= 2.5;
             }
             if (objects.Game.keyboardManager.moveRight) {
-                this.x += 5;
+                this.x += 2.5;
+            }
+            if (objects.Game.keyboardManager.moveUp) {
+                this.y -= 2.5;
+            }
+            if (objects.Game.keyboardManager.moveDown) {
+                this.y += 2.5;
             }
         };
         Player.prototype.CheckBounds = function () {
@@ -51,6 +58,19 @@ var objects;
             if (this.x <= this.halfW) {
                 this.x = this.halfW;
             }
+            if (this.y <= this.halfH) {
+                this.y = this.halfH;
+            }
+            if (this.y >= 800 - this.halfH) {
+                this.y = 800 - this.halfH;
+            }
+            // makes the player teleport back down to the bottom
+            // if(this.y <= this.halfH){
+            //     this.y = 800 - this.halfH;
+            // }
+            // if(this.y <= this.halfH) {
+            //     this.y = 800 + this.halfH;
+            // }
         };
         return Player;
     }(objects.GameObject));

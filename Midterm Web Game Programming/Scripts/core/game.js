@@ -18,11 +18,15 @@
         { id: "startButton", src: "./Assets/Images/startButton.png" },
         { id: "nextButton", src: "./Assets/Images/nextButton.png" },
         { id: "backButton", src: "./Assets/Images/backButton.png" },
-        { id: "background", src: "./Assets/Images/SeamlessBG.png" },
-        { id: "player", src: "./Assets/Images/Spaceship.png" },
-        { id: "enemy", src: "./Assets/Images/Enemy.png" },
-        { id: "explode", src: "./Assets/Audio/explode.wav" },
-        { id: "play_music", src: "./Assets/Audio/play_music.ogg" }
+        { id: "stbackground", src: "./Assets/Images/SpaceBG.png" },
+        { id: "background", src: "./Assets/Images/WinnerBG.gif" },
+        { id: "player", src: "./Assets/Images/player.png" },
+        { id: "enemy", src: "./Assets/Images/end.png" },
+        { id: "trigger", src: "./Assets/Images/trigger.png" },
+        { id: "winner", src: "./Assets/Audio/winner.wav" },
+        { id: "warp", src: "./Assets/Audio/warp.wav" },
+        { id: "play_music", src: "./Assets/Audio/play_music.mp3" },
+        { id: "wall", src: "./Assets/Images/wall.png" }
     ];
     function Init() {
         console.log("Initialization start");

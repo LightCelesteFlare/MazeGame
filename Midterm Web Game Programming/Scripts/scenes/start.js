@@ -27,8 +27,8 @@ var scenes;
         };
         // Use start function to create objects
         StartScene.prototype.Start = function () {
-            this.background = new objects.Background(this.assetManager);
-            this.welcomeLabel = new objects.Label("Welcome!", "60px", "Consolas", "#FFFFFF", 320, 240, true);
+            this.background = new objects.StartBackground(this.assetManager);
+            this.welcomeLabel = new objects.Label("Abyss Locket Maze", "60px", "Consolas", "#FFFFFF", 310, 240, true);
             this.startButton = new objects.Button(this.assetManager, "startButton", 300, 450);
             this.Main();
         };
